@@ -47,19 +47,6 @@ console.log(ticTacToe)
 // The string:
 
 
-// const  validateEmail = (email) => {
-//   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-//   let result = emailValidator.test(email);
-  
-//   if(result) {
-//     console.log('Email passed the test!');
-//   }
-//   else {
-//     console.log('Email not valid, please try again!');
-//   }
-// }
-// validateEmail('mikeg@downtownseattle.org');
-
 const validateEmail = (email) => {
   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   let result = emailValidator.test(email);
@@ -70,16 +57,29 @@ validateEmail('mikeg@downtownseattle.org')
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
-const assignmentDate = '1/21/2019';
 
+
+const convetStringToDate = (yourDate) => {
+  const stringToDate = new Date(yourDate)
+  return stringToDate
+}
+console.log(convetStringToDate('1/21/2019'))
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
+const dueDate = new Date('1/28/2021')
+console.log(dueDate)
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
+
+var formattedDate = dueDate.toISOString().slice(0, 10);
+console.log(formattedDate);
 // I have provided a months array to help
+
+<time datetime="2021-01-29">formattedDate</time>
+
 const months = [
   'January',
   'February',
@@ -94,6 +94,7 @@ const months = [
   'November',
   'December'
 ];
+
 
 
 // 10. log this value using console.log
