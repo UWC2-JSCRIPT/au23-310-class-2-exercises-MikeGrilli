@@ -33,10 +33,10 @@ const ticTacToe = [
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-ticTacToe[0][2] = 'O'
+ticTacToe[0][2] = 'O';
 
 // 5. Log the grid to the console.
-console.log(ticTacToe)
+console.log(ticTacToe);
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace
@@ -50,9 +50,9 @@ console.log(ticTacToe)
 const validateEmail = (email) => {
   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   let result = emailValidator.test(email);
-  return result ? console.log('Email passed the test!') : console.log('Email not valid, please try again!')
+  return result ?  console.log('Email passed the test!') : console.log('Email not valid, please try again!');
 }
-validateEmail('mikeg@downtownseattle.org')
+validateEmail('mikeg@downtownseattle.org');
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
@@ -60,25 +60,26 @@ validateEmail('mikeg@downtownseattle.org')
 
 
 const convetStringToDate = (yourDate) => {
-  const stringToDate = new Date(yourDate)
-  return stringToDate
+  const stringToDate = new Date(yourDate);
+ console.log(stringToDate);
 }
-console.log(convetStringToDate('1/21/2019'))
+convetStringToDate('1/21/2019');
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
-const dueDate = new Date('1/28/2021')
-console.log(dueDate)
+const createDueDate = (date) => {
+  const dueDate = new Date(date);
+  console.log(dueDate)
+}
+
+createDueDate('1/28/2021');
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
-
-var formattedDate = dueDate.toISOString().slice(0, 10);
-console.log(formattedDate);
 // I have provided a months array to help
 
-<time datetime="2021-01-29">formattedDate</time>
+// console.log(dueDate.toDateString().slice(4,dueDate.length));
 
 const months = [
   'January',
@@ -94,7 +95,5 @@ const months = [
   'November',
   'December'
 ];
-
-
 
 // 10. log this value using console.log
