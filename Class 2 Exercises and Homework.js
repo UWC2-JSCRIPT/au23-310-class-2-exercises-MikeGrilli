@@ -25,14 +25,18 @@ console.log(`My best friends name is ${bff} and my favorite food is ${favoriteFo
 // -O-
 // -XO
 // X-X
-
+const ticTacToe = [ 
+  ['-', 'O', '-'],
+  ['-', 'X', 'O'],
+  ['X', '-', 'X']
+];
 
 // 4. After the array is created, 'O' claims the top right square.
 // Update that value.
-
+ticTacToe[0][2] = 'O'
 
 // 5. Log the grid to the console.
-
+console.log(ticTacToe)
 
 // 6. You are given an email as string myEmail, make sure it is in correct email format.
 // Should be 1 or more characters, then @ sign, then 1 or more characters, then dot, then one or more characters - no whitespace
@@ -40,7 +44,28 @@ console.log(`My best friends name is ${bff} and my favorite food is ${favoriteFo
 // Hints:
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
+// The string:
 
+
+// const  validateEmail = (email) => {
+//   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+//   let result = emailValidator.test(email);
+  
+//   if(result) {
+//     console.log('Email passed the test!');
+//   }
+//   else {
+//     console.log('Email not valid, please try again!');
+//   }
+// }
+// validateEmail('mikeg@downtownseattle.org');
+
+const validateEmail = (email) => {
+  let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  let result = emailValidator.test(email);
+  return result ? console.log('Email passed the test!') : console.log('Email not valid, please try again!')
+}
+validateEmail('mikeg@downtownseattle.org')
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
