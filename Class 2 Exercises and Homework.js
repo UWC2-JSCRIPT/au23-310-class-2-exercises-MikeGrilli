@@ -70,16 +70,6 @@ validateEmail('mikeg@downtownseattle.org');
 
   const dueDate = new Date(assignmentDate.setDate( assignmentDate.getDate(assignmentDate) + 7));
   console.log(dueDate);
-
-  const formattedDueDate = new Date(assignmentDate).toISOString().slice(0, 10);
-  console.log(formattedDueDate);
-
-  const day = formattedDueDate.slice(formattedDueDate.length - 2, formattedDueDate.length);
-  console.log(day);
-  
-  const year = formattedDueDate.slice(0, 4);
-  console.log(year);
-
  
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
@@ -100,6 +90,15 @@ const months = [
   'November',
   'December'
 ];
+
+const formattedDueDate = new Date(assignmentDate).toISOString().slice(0, 10);
+console.log(formattedDueDate);
+
+const day = formattedDueDate.slice(formattedDueDate.length - 2, formattedDueDate.length);
+console.log(day);
+
+const year = formattedDueDate.slice(0, 4);
+console.log(year);
 
 
 console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>}`);
