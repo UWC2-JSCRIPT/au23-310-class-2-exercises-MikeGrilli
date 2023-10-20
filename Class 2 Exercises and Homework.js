@@ -51,23 +51,34 @@ const validateEmail = (email) => {
   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   let result = emailValidator.test(email);
   return result ?  console.log('Email passed the test!') : console.log('Email not valid, please try again!');
-}
+};
+validateEmail('mikeg');
+validateEmail('mikeg@');
+validateEmail('mikeg@downtownseattle');
+validateEmail('@downtownseattle.org');
 validateEmail('mikeg@downtownseattle.org');
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
 
-
-
-  const stringToDate = new Date('1/21/2019');
-  console.log(stringToDate);
-
+  const assignmentDate = new Date('10/20/2023');
+  console.log(assignmentDate);
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
-  const dueDate = new Date('1/28/2019').toISOString().slice(0, 10);
+  const dueDate = new Date(assignmentDate.setDate( assignmentDate.getDate(assignmentDate) + 7));
+  console.log(dueDate);
+
+  const formattedDueDate = new Date(assignmentDate).toISOString().slice(0, 10);
+  console.log(formattedDueDate);
+
+  const day = formattedDueDate.slice(formattedDueDate.length - 2, formattedDueDate.length);
+  console.log(day);
+  
+  const year = formattedDueDate.slice(0, 4);
+  console.log(year);
 
  
 // 9. Use dueDate values to create an HTML time tag in format
@@ -91,5 +102,6 @@ const months = [
 ];
 
 
-console.log(`<time datetime=${dueDate}>${months[0]} ${dueDate.slice(5,7)}, ${dueDate.slice(0,4)}></date>}`);
+console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>}`);
+
 
