@@ -59,27 +59,21 @@ validateEmail('mikeg@downtownseattle.org');
 // Convert this string to a Date
 
 
-const convetStringToDate = (yourDate) => {
-  const stringToDate = new Date(yourDate);
- console.log(stringToDate);
-}
-convetStringToDate('1/21/2019');
+
+  const stringToDate = new Date('1/21/2019');
+  console.log(stringToDate);
+
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
-const createDueDate = (date) => {
-  const dueDate = new Date(date);
-  console.log(dueDate)
-}
+  const dueDate = new Date('1/28/2019').toISOString().slice(0, 10);
 
-createDueDate('1/28/2021');
-
+ 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
 
-// console.log(dueDate.toDateString().slice(4,dueDate.length));
 
 const months = [
   'January',
@@ -96,4 +90,6 @@ const months = [
   'December'
 ];
 
-// 10. log this value using console.log
+
+console.log(`<time datetime=${dueDate}>${months[0]} ${dueDate.slice(5,7)}, ${dueDate.slice(0,4)}></date>}`);
+
