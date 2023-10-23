@@ -13,7 +13,8 @@ const me = {
     lastName: "Grilli",
     favoriteFood: "Thai"
   }
-};
+}; 
+
 
 // 2. console.log best friend's firstName and your favorite food
 const { favoriteFood, bestFriend } = me;
@@ -101,6 +102,7 @@ const year = formattedDueDate.slice(0, 4);
 console.log(year);
 
 
-console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>}`);
+console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>`);
+
 
 
