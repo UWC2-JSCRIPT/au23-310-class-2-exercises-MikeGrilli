@@ -51,7 +51,7 @@ console.log(ticTacToe);
 const validateEmail = (email) => {
   let emailValidator = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
   let result = emailValidator.test(email);
-  return result ?  console.log('Email passed the test!') : console.log('Email not valid, please try again!');
+  return result ?  console.log('Email is valid! Nice job!') : console.log('Email not valid, please try again!');
 };
 validateEmail('mikeg');
 validateEmail('mikeg@');
@@ -69,7 +69,7 @@ validateEmail('mikeg@downtownseattle.org');
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
 
-  const dueDate = new Date(assignmentDate.setDate( assignmentDate.getDate(assignmentDate) + 7));
+  const dueDate = new Date(assignmentDate.setDate(assignmentDate.getDate(assignmentDate) + 7));
   console.log(dueDate);
  
 // 9. Use dueDate values to create an HTML time tag in format
@@ -103,6 +103,3 @@ console.log(year);
 
 
 console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>`);
-
-
-
