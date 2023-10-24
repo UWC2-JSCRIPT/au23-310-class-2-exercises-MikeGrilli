@@ -102,4 +102,4 @@ const year = formattedDueDate.slice(0, 4);
 console.log(year);
 
 
-console.log(`<time datetime=${formattedDueDate}>${months[0]} ${day}, ${year}></date>`);
+console.log(`<time datetime=${formattedDueDate}>${months[9]} ${day}, ${year}></date>`);
